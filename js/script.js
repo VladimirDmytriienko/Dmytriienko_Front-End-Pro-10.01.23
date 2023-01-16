@@ -3,6 +3,6 @@
 
 "use strict";
 
-let name = prompt('WHAT’S YOUR NAME?', '');
+let yourName = prompt('WHAT’S YOUR NAME?', '');
 
-alert(`Hello, ${name}! How are you? `); 
+alert(`Hello, ${yourName}! How are you? `); 
