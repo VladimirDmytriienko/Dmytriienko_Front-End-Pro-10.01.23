@@ -9,14 +9,10 @@ const thirdStr = prompt('Введіть щось', '');
 alert(firstStr + ' ' + secondStr + ' ' + thirdStr);
 
 
-const randomNum = '12345';
+const randomNum = 12345;
 
-const symbOne = randomNum.slice(0, 1);
-const symbTwo = randomNum.slice(1, 2);
-const symbThree = randomNum.slice(2, 3);
-const symbFour = randomNum.slice(3, 4);
-const symbFive = randomNum.slice(4, 5);
-console.log(symbOne + ' ' + symbTwo + ' ' + symbThree + ' ' + symbFour + ' ' + symbFive);
+
+console.log(String(randomNum)[0] + ' ' + String(randomNum)[1] + ' ' + String(randomNum)[2] + ' ' + String(randomNum)[3] + ' ' + String(randomNum)[4]);
 
 ////////////////////////////////////////////////////////////////////////////////HW7
 
