@@ -11,8 +11,7 @@ alert(firstStr + ' ' + secondStr + ' ' + thirdStr);
 
 const randomNum = 12345;
 
-
-console.log(String(randomNum)[0] + ' ' + String(randomNum)[1] + ' ' + String(randomNum)[2] + ' ' + String(randomNum)[3] + ' ' + String(randomNum)[4]);
+// console.log(String(randomNum)[0] + ' ' + String(randomNum)[1] + ' ' + String(randomNum)[2] + ' ' + String(randomNum)[3] + ' ' + String(randomNum)[4]);
 
 ////////////////////////////////////////////////////////////////////////////////HW7
 
