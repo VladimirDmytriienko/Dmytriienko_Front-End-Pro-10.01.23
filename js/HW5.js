@@ -62,15 +62,45 @@ for (let i = 0; i <= arrayPositive.length; i++) {
 console.log(`Кількість парних позитивних елементів: ${evenNum.length}` );
 
 //Знайти суму парних позитивних елементів.
-
-console.log (evenNum);
-
 let sumEvenNum = 0;
-
-for (let i=0; i<= evenNum.length; i++) {
-    sumEvenNum += evenNum[i];
-    
+for (let i=0; i<=evenNum.length; i++) {
+    if (evenNum[i]>0) {
+        sumEvenNum += evenNum[i]; 
+    }    
 }
-console.log(sumEvenNum);
+console.log(`Сума парних позитивних елементів ${sumEvenNum}`);
 
 //Знайти суму непарних позитивних елементів.
+
+let sumOddNum = 0;
+for (let i=0; i<=oddNum.length; i++) {
+    if (oddNum[i]>0) {
+        sumOddNum+=oddNum[i];
+    }
+}
+console.log(`Cума непарних позитивних елементів ${sumOddNum}`);
+
+// Знайти добуток позитивних елементів.
+
+let mult = 1;
+for (let i=0; i<arrayPositive.length; i++) {
+    if (arrayPositive[i]>0) {
+        mult *= arrayPositive[i];
+    }
+}
+console.log(mult);
+
+//Знайти найбільший серед елементів масиву, ост альні обнулити.
+
+let max = array[0];
+let maxi = 0;
+for (let i = 1; i < array.length; i++) {
+  if (array[i] > max) {
+    max = array[i];
+    array[maxi] = 0;
+    maxi = i;
+  } else {
+    array[i] = 0;
+  }
+}
+console.log(array);
