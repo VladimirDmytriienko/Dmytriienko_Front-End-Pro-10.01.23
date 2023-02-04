@@ -26,9 +26,8 @@ console.log(key);
 
 ////////////////////////////////////////////////////////
 
-let ownArray = ['qwr', 'qwe', 'wqe',1, 2, 3, 4, 5, 6, 7, 'sdc', 'wq' , 'vc', 'h', 'sdv', 1, 44, 1, 1, 1, 'end'];
 
-function defineAverage() {
+function defineAverage(ownArray) {
   const numbers = ownArray.filter(x => !isNaN(x));
   if (numbers.length == 0){
     return 0;
@@ -37,29 +36,33 @@ function defineAverage() {
 
   return sum / numbers.length;
 }
-console.log(defineAverage());
+console.log(defineAverage(['qwr', 'qwe', 'wqe',1, 2, 3, 4, 5, 6, 7, 'sdc', 'wq' , 'vc', 'h', 'sdv', 1, 44, 1, 1, 1, 'end']));
 
 ///////////////////////////
 
 function doMath(x, znak , y) {
-    if (znak == '*' ) {
-        console.log(x*y);
-    } else if (znak == '+') {
-        console.log(x+y);
-    } else if (znak == '-') {
-        console.log(x-y);
-    }
-    else if (znak == '/') {
-        console.log(x/y);
-    }
-    else if (znak == '%') {
-        console.log(x%y);
-    } else if (znak == '**') {
-        console.log(x**y);
-    }
-    
+    switch (znak) {
+        case "*" :
+            console.log(x*y);
+            break;
+        case "/" :
+            console.log(x/y);
+            break;
+        case "+" :
+            console.log(x+y);
+            break;
+        case "-" :
+            console.log(x-y);
+            break;
+        case "%" :
+            console.log(x%y);
+            break;   
+        case "**" :
+            console.log(x**y);
+            break; 
+    }  
 }
-doMath(77, "%" ,23);
+doMath(77, "+" ,23);
   
 /////////////////////////////////////////////////
 
