@@ -71,7 +71,8 @@ class Car {
         }
     }
     info() {
-        console.log(`Бренд: ${this.brand}; Модель: ${this.model}; Год выпуска: ${this.year}; Номер авто: ${this.numberplate}`);
+        console.log(`Бренд: ${this.brand}; Модель: ${this.model}; 
+        Год выпуска: ${this.year}; Номер авто: ${this.numberplate}`);
 
         this.owner.info();
     }
