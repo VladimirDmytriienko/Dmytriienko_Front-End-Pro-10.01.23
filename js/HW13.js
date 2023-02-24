@@ -1,10 +1,12 @@
 
 function dayToday(givenNum) {
     const now = new Date().setHours(0, 0, 0, 0);
-    const isDayToday = (givenNum === now) ? true : false;
+    const timeCompares = new Date(givenNum).setHours(0, 0, 0, 0);
+    const isDayToday = (timeCompares === now) ? true : false;
     return isDayToday
 }
-console.log(dayToday(1677103200000));
+console.log(dayToday(1677256979342));
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
