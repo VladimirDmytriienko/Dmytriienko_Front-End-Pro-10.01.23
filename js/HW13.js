@@ -3,7 +3,7 @@ function dayToday(givenNum) {
     const now = new Date().setHours(0, 0, 0, 0);
     const timeCompares = new Date(givenNum).setHours(0, 0, 0, 0);
     const isDayToday = (timeCompares === now) ? true : false;
-    return isDayToday
+    return isDayToday;
 }
 console.log(dayToday(1677256979342));
 
@@ -12,7 +12,7 @@ console.log(dayToday(1677256979342));
 
  
 function returnDate(d){
-    const stringDate = new Date(d)
+    const stringDate = new Date(d);
 	const date = stringDate.getDate().toString().padStart(2, "0");
 	const month = (stringDate.getMonth() + 1).toString().padStart(2, "0");
 	const year = stringDate.getFullYear();
@@ -56,8 +56,8 @@ function dateDiference(yourTime) {
     const ss = Math.floor(msec / 1000);
     msec -= ss * 1000;
     
-    return `${willOrWas} ${yy} годов/лет ${month}  месяцов ${dd} дней ${hh} часов ${hh} дней ${mm} минут`
+    return `${willOrWas} ${yy} годов/лет ${month}  месяцов ${dd} дней ${hh} часов ${hh} дней ${mm} минут`;
 }
 
-console.log(dateDiference(1588983680000))
+console.log(dateDiference(1588983680000));
 
