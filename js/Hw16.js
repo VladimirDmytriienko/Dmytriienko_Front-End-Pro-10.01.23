@@ -2,13 +2,10 @@
 new Promise((resolve, reject) => {
     console.log('Проснулся');
     resolve();
-})
-.then(() => {
+}).then(() => {
     console.log('Почистил зубы');
-})
-.then(() => {
+}).then(() => {
     console.log('Поел');
-})
-.then(() => {
+}).then(() => {
     console.log('Пошел учить JS');
 });
