@@ -1,11 +1,17 @@
-
 new Promise((resolve, reject) => {
     console.log('Проснулся');
-    resolve();
-}).then(() => {
+    resolve(4);
+})
+.then((result) => {
     console.log('Почистил зубы');
-}).then(() => {
+    return result * 2
+})
+.then((result) => {
     console.log('Поел');
-}).then(() => {
+    return result * 2
+})
+.then((result) => {
     console.log('Пошел учить JS');
+    console.log(result)
+   
 });
