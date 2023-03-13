@@ -27,10 +27,13 @@ const learnJs  = () => {
 }
 const day  =  async function  () {
     const up = await getUp()
+    console.log(up)
     const teeth = await brushTeeth ()
+    console.log(teeth)
     const breakfast = await haveBreakfast()
+    console.log(breakfast)
     const js = await learnJs()
-    console.log(up, teeth, breakfast, js)
+    console.log(js)
 }
 day()
 
