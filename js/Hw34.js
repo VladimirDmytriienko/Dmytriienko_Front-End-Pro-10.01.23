@@ -5,7 +5,7 @@ const ggGhost = document.querySelector('.box');
 const text = document.querySelector('.txt');
 
 function openGhost() {
-    ggGhost.style.display = 'flex'
+    ggGhost.style.display = 'block'
 }
 function closeGhost() {
     ggGhost.style.display = 'none'
