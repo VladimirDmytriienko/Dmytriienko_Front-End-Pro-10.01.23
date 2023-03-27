@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider38</title>
+  <style>
+    .slider {
+      margin: auto;
+      position: relative;
+      width: 90vw;
+      height: 90vh;
+    }
+
+    .slider img {
+      margin: auto;
+      width: 50%;
+      height: auto;
+    }
+
+    .slider button {
+      position: absolute;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: black;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .slider .prev {
+      left: 0;
+    }
+
+    .slider .next {
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <img
+      src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+      alt="Image 1">
+    <img
+      src="https://imageio.forbes.com/specials-images/imageserve/5faad4255239c9448d6c7bcd/Best-Animal-Photos-Contest--Close-Up-Of-baby-monkey/960x0.jpg?format=jpg&width=960"
+      alt="Image 2">
+    <img src="https://cdn.britannica.com/34/180334-138-4235A017/subordinate-meerkat-pack.jpg?w=800&h=450&c=crop"
+      alt="Image 3">
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <script src="./js/hw38.js">
+    
+  </script>
+</body>
+
+</html>
