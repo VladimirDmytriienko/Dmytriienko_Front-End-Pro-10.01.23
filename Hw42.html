@@ -7,9 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW42</title>
     <style>
+        body {
+            margin: 30px;
+            min-height: 100vh;
+            background: #093028;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: whitesmoke;
+        }
         form {
+            margin: 5% auto;
+            background: #232526;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             display: flex;
             flex-direction: column;
+            padding: 1rem;
+            color: whitesmoke;
+            border-radius: 20px;
+            border: 0.2rem solid whitesmoke;
+            max-width: 50vw;
+           
+        }
+        label, input {
+            margin: 0.25rem;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            border-radius: 30px;
+            border-style: hidden; /* hide standard table (collapsed) border */
+            box-shadow: 0 0 0 1.2rem #666; /* this draws the table border  */ 
+            
+        }
+        td {
+            padding: 5px 20px;
         }
     </style>
 </head>
@@ -18,11 +51,11 @@
     <form name="main" class="main-form" action="">
 
         <label for="">Ім'я</label>
-        <input type="firstName">
+        <input name="firstName">
         <label for="">Прізвище </label>
-        <input type="secondName">
+        <input name="secondName">
         <label for="">Дата народженн</label>
-        <input type="birthDate">
+        <input name="birthDate">
 
         <label for="gender">Стать:</label>
         <div class="gender">
@@ -40,13 +73,13 @@
             <option value="Дніпро">Дніпро</option>
         </select>
         <label for="">Адреса</label>
-        <textarea name="adress" id="" ></textarea>
+        <textarea name="adress" id=""></textarea>
         <label for="">Мови, якими володієте:</label>
         <div>
             <input type="checkbox" id="" name="ukranian" checked>
             <label for="Uk">Українска</label>
         </div>
-       
+
         <div>
             <input type="checkbox" id="" name="English">
             <label for="en">English</label>
@@ -56,10 +89,33 @@
             <label for="fr">French </label>
         </div>
 
-        <input type="submit" value="Зберегти">
+        <input type="submit" value="Зберегти" id="submit-btn">
     </form>
-
+   
     <script>
+        const form = document.querySelector(".main-form");
+        const table = document.createElement("table");
+
+        form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const formDataObject = Object.fromEntries(formData);
+
+        Object.entries(formDataObject).forEach(([key, value]) => {
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.textContent = `${key}: ${value}`;
+            tr.appendChild(td);
+
+            table.appendChild(tr);
+        });
+        form.style.display = "none";
+        document.body.appendChild(table);
+        });
+        
+
+
 
     </script>
 </body>
