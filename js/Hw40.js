@@ -1,4 +1,4 @@
-let arr = [1, 2, 3, [1, 2]]
+const arr = [1, 2, 3, [1, 2]]
 
 function generateList(array) {
     const ul = document.createElement('ul');
