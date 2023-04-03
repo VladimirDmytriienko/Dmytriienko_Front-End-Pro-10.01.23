@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW42</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="main" class="main-form" action="">
+
+        <label for="">Ім'я</label>
+        <input type="firstName">
+        <label for="">Прізвище </label>
+        <input type="secondName">
+        <label for="">Дата народженн</label>
+        <input type="birthDate">
+
+        <label for="gender">Стать:</label>
+        <div class="gender">
+            <label for="">М</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="">Ж</label>
+            <input type="radio" id="female" name="gender" value="female">
+        </div>
+        <label for="city" class="main-form__label">Місто:</label>
+        <select id="city" name="citySelect" class="main-form__select">
+            <option value="Харків">Харків</option>
+            <option value="Київ">Київ</option>
+            <option value="Одеса">Одеса</option>
+            <option value="Львів">Львів</option>
+            <option value="Дніпро">Дніпро</option>
+        </select>
+        <label for="">Адреса</label>
+        <textarea name="adress" id="" ></textarea>
+        <label for="">Мови, якими володієте:</label>
+        <div>
+            <input type="checkbox" id="" name="ukranian" checked>
+            <label for="Uk">Українска</label>
+        </div>
+       
+        <div>
+            <input type="checkbox" id="" name="English">
+            <label for="en">English</label>
+        </div>
+        <div>
+            <input type="checkbox" id="" name="French">
+            <label for="fr">French </label>
+        </div>
+
+        <input type="submit" value="Зберегти">
+    </form>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

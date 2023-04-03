@@ -10,7 +10,7 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: snow;
-            height: 100vh;
+            
             background: #780206;
             /* fallback for old browsers */
             background: -webkit-linear-gradient(to top, #061161, #780206);
@@ -76,6 +76,13 @@
             top: 50%;
             text-align: center;
         }
+        form {
+            align-self: start;
+        }
+        .main-form {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -111,17 +118,63 @@
             </div>
         </div>
         <div class="block buy">
+
             <button class="button"> BUY </button>
+
+        </div>
+        <div class="block">
+            <form name="main" class="main-form" action="#">
+                <div class="main-form__item ">
+                    <label for="name">ПІБ покупця:</label>
+                    <input type="text" name="name" placeholder="Ім'я ">
+                    <input type="text" name="surname" placeholder="Призвіще">
+                    <input type="text" name="fname" placeholder="по батькові">
+                </div>
+                <div class="main-form__item">
+                    <label for="city" class="main-form__label">Місто</label>
+                    <select id="city" name="citySelect" class="main-form__select">
+                        <option value="Харків">Харків</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Одеса">Одеса</option>
+                        <option value="Львів">Львів</option>
+                        <option value="Дніпро">Дніпро</option>
+                    </select>
+                </div>
+                <div class="main-form__item">
+                    <label for="post">Номер пошты:</label>
+                    <input type="text" name="post" placeholder="введіть відділення ">
+                </div>
+                <div class="main-form__item">
+                    <label for="payment" class="main-form__label">Оплата</label>
+                    <select id="city" name="paymentMethod" class="main-form__select">
+                        <option value="cash">Післяплата </option>
+                        <option value="card">Оплати банківської картки</option>
+                       
+                    </select>
+                </div>
+                <div class="main-form__item">
+                    <label for="quantity">Кількість:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                </div>
+                <div class="main-form__item">
+                    <label for="input_2" class="main-form__label">Коментар</label>
+                    <textarea tabindex="1" id="input_2" type="text" name="nameTextarea" class="main-form__textarea" placeholder="Залиште коментар до замовлення" autocomplete="off"></textarea>
+                </div>
+                
+                <input type="submit" value="Підтвердження замовлення">
+            </form>
         </div>
         <div class="modal">
-                <h1>товар куплений ! </h1>
+            <h1>товар куплений ! </h1>
         </div>
         
     </div>
 
     
 
-    <script src="./js/HW41.js"></script>
+    <script src="./js/HW41.js">
+        
+    </script>
 
 </body>
 
