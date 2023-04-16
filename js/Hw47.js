@@ -29,12 +29,20 @@ button.addEventListener('click', ()=> {
         
             </div> `;
             document.getElementById('comment-btn').addEventListener('click', async () => {
-                console.log("Button clicked");
+                
                 await fetchComments();
-                wrapper.innerHTML += `
-                    <p> mail: ${dataComments[inputNumber-1].email} </p>
-                    <p> комент: ${dataComments[inputNumber-1].body} </p>
-                    `;
+                dataComments.forEach(item => {
+                    if (item.postId == inputNumber) {
+                        
+                        wrapper.innerHTML += `
+                        <p class="user-mail"> mail: ${item.email} </p>
+                        <p> комент: ${item.body} </p>
+                        `;
+                    }
+                  });
+
+                
+
             });
         } catch (e) {
             alert( e.message ); 
@@ -46,7 +54,9 @@ button.addEventListener('click', ()=> {
 async function fetchComments() {
     const response = await fetch(API_URL_COMMENTS);
     dataComments = await response.json();
+
 }
+
 
 
 
