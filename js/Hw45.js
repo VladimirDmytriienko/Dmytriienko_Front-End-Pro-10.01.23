@@ -1,4 +1,4 @@
-const API_URL = "http://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19"
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=5d066958a60d315387d9492393935c19"
 
 fetch(API_URL)
     .then((response) => {
@@ -20,4 +20,8 @@ fetch(API_URL)
         </div>
         `;
      })
+    .catch(error => {
+
+        console.error('Помилка: ', error);
+    });
  
