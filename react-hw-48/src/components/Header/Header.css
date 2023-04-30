@@ -1,0 +1,19 @@
+
+header {
+    background: #5c16c5;
+    border-radius: 30px;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    
+}
+li {
+    padding: 8px;
+}
+span {
+    font-size: 1em;
+    color: #f5f5f7
+
+}
